@@ -11,7 +11,7 @@ Necesita ser ejecutado en un entorno de ejecución en el que estén instaladas l
 ## Estructura de archivos del proyecto
 
 ```text
-gitlab_uploader/
+git_uploader/
 ├── docs/
 │   ├── git_uploader.drawio
 │   └── git_uploader.drawio.svg
