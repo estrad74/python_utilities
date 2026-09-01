@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="gccdKSzVaccLq8ggvQXX">
+    <mxGraphModel dx="940" dy="518" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-2" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="AWXbase" vertex="1">
+          <mxGeometry height="170" width="360" x="234" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-4" parent="8VkcVjJw8nUfXCwZTE49-2" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="360" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-5" parent="8VkcVjJw8nUfXCwZTE49-2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ __init__(awx_url, awx_token, verify_ssl = False, page_size = 50)&lt;/div&gt;&lt;div&gt;+ _make_request(url) -&amp;gt; Dict&lt;/div&gt;&lt;div&gt;+ _add_page_size_to_url(url) -&amp;gt; str:&lt;/div&gt;&lt;div&gt;+ _get_all_pages(url, resource_name = &quot;elementos&quot;) -&amp;gt; List[Dict]&lt;/div&gt;&lt;div&gt;+ get_inventory_info(inventory_id) -&amp;gt; Dict&lt;/div&gt;&lt;div&gt;+ get_host_data(host) -&amp;gt; Optional[Dict]&lt;/div&gt;&lt;div&gt;+ get_inventory_hosts_paginated(inventory_id)&lt;/div&gt;&lt;div&gt;+ (abstract) export(inventory_id, output_file, include_metadata = True)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="136" width="360" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-6" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="AWXInventoryCSVExporter" vertex="1">
+          <mxGeometry height="170" width="320" x="50" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-7" parent="8VkcVjJw8nUfXCwZTE49-6" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ NUM_HOSTS_BLOQUE = 20" vertex="1">
+          <mxGeometry height="26" width="320" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-8" parent="8VkcVjJw8nUfXCwZTE49-6" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="320" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-9" parent="8VkcVjJw8nUfXCwZTE49-6" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ _extract_os_info(host_vars) -&amp;gt; Tuple&lt;/div&gt;&lt;div&gt;+ export(inventory_id, output_file,&amp;nbsp;include_metadata = True)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="320" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-10" edge="1" parent="1" source="8VkcVjJw8nUfXCwZTE49-6" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.36;entryY=1.027;entryDx=0;entryDy=0;entryPerimeter=0;" target="8VkcVjJw8nUfXCwZTE49-5" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="330" y="560" as="sourcePoint" />
+            <mxPoint x="490" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-11" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="AWXInventoryYAMLExporter" vertex="1">
+          <mxGeometry height="170" width="320" x="450" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-12" parent="8VkcVjJw8nUfXCwZTE49-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ NUM_HOSTS_BLOQUE = 20" vertex="1">
+          <mxGeometry height="26" width="320" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-13" parent="8VkcVjJw8nUfXCwZTE49-11" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="320" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-14" parent="8VkcVjJw8nUfXCwZTE49-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ get_inventory_structure(inventory_id) -&amp;gt; Dict&lt;/div&gt;&lt;div&gt;+ _get_group_data(group, include_host_vars = True) -&amp;gt; Dict&lt;/div&gt;&lt;div&gt;+ _write_all_hosts_to_file(file_handle, inventory_id)&lt;/div&gt;&lt;div&gt;+ _write_group_recursively(file_handle, group_name,&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; group_data, indent_level = 2)&lt;/div&gt;&lt;div&gt;+ export(inventory_id, output_file, include_metadata = True)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="320" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-15" edge="1" parent="1" source="8VkcVjJw8nUfXCwZTE49-11" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.583;entryY=1.022;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="8VkcVjJw8nUfXCwZTE49-5" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="330" y="560" as="sourcePoint" />
+            <mxPoint x="490" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-16" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="GitLabUploader" vertex="1">
+          <mxGeometry height="110" width="460" x="200" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-18" parent="8VkcVjJw8nUfXCwZTE49-16" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="460" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-19" parent="8VkcVjJw8nUfXCwZTE49-16" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ __init__(gitlab_url, project_id, access_token,&amp;nbsp;branch = &quot;main&quot;, verify_ssl = False)&lt;/div&gt;&lt;div&gt;+ file_exists(file_path) -&amp;gt; bool&lt;/div&gt;&lt;div&gt;+ upload_file(local_file_path, remote_file_path,&amp;nbsp;custom_commit_message = None) -&amp;gt; bool&lt;/div&gt;&lt;div&gt;+ create_directory_structure(directory_path) -&amp;gt; bool&lt;/div&gt;" vertex="1">
+          <mxGeometry height="76" width="460" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-20" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="AWX_inventory_exporter_script" vertex="1">
+          <mxGeometry height="340" width="400" x="220" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-21" parent="8VkcVjJw8nUfXCwZTE49-20" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;Argumentos:&lt;/div&gt;&lt;div&gt;--awx-url: requerido, url base de la API de AWX&lt;/div&gt;&lt;div&gt;--awx_token: requerido, token de acceso a AWX&lt;/div&gt;&lt;div&gt;--inventory_id: requerido, id del inventario a exportar&amp;nbsp;&lt;/div&gt;&lt;div&gt;--page-size: opcional, tamaño de página para consultas a AWX&lt;/div&gt;&lt;div&gt;--format: requerido, formato de fichero de exportación (YAML o CSV)&lt;/div&gt;&lt;div&gt;--output: requerido, nombre del fichero de salida&lt;/div&gt;&lt;div&gt;--include-metadata: opcional (true), exportación de campos adicionales&lt;/div&gt;&lt;div&gt;--gitlab-url: requerido, url del repositorio gitlab donde subir el export&lt;/div&gt;&lt;div&gt;--gitlab-project-id: requerido, id del proyecto gitlab&lt;/div&gt;&lt;div&gt;--gitlab-token: requerido, token de acceso a gitlab&lt;/div&gt;&lt;div&gt;--gitlab-path: ruta destino dentro del repositorio gitlab&lt;/div&gt;&lt;div&gt;--gitlab-branch: opcional (main), rama del repositorio gitlab&lt;/div&gt;&lt;div&gt;--verify-ssl: opcional (false), verificación ssl en gitlab&lt;/div&gt;" vertex="1">
+          <mxGeometry height="214" width="400" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-22" parent="8VkcVjJw8nUfXCwZTE49-20" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="400" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-23" parent="8VkcVjJw8nUfXCwZTE49-20" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ parse_arguments(): parsea argumentos de línea de comandos&lt;/div&gt;&lt;div&gt;+ create_exporter(args) -&amp;gt; exporter: crea el exportador según el formato indicado&lt;/div&gt;&lt;div&gt;+ export_inventory(exporter,args): realiza la exportación del inventario a fichero&lt;/div&gt;&lt;div&gt;+ upload_to_gitlab(args): sube el fichero de exportación a gitlab.&lt;/div&gt;&lt;div&gt;+ main(): función principal&lt;/div&gt;" vertex="1">
+          <mxGeometry height="92" width="400" y="248" as="geometry" />
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-24" edge="1" parent="1" source="8VkcVjJw8nUfXCwZTE49-20" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.283;exitY=-0.003;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.442;entryY=0.998;entryDx=0;entryDy=0;entryPerimeter=0;" target="8VkcVjJw8nUfXCwZTE49-9" value="Use">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="360" y="540" as="sourcePoint" />
+            <mxPoint x="520" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-25" edge="1" parent="1" source="8VkcVjJw8nUfXCwZTE49-20" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=0.489;entryY=1.023;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.652;exitY=-0.008;exitDx=0;exitDy=0;exitPerimeter=0;" target="8VkcVjJw8nUfXCwZTE49-14" value="Use">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="510" y="550" as="sourcePoint" />
+            <mxPoint x="520" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8VkcVjJw8nUfXCwZTE49-26" edge="1" parent="1" source="8VkcVjJw8nUfXCwZTE49-23" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.493;exitY=0.989;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.472;entryY=0.029;entryDx=0;entryDy=0;entryPerimeter=0;" target="8VkcVjJw8nUfXCwZTE49-16" value="Use">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="360" y="960" as="sourcePoint" />
+            <mxPoint x="520" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
