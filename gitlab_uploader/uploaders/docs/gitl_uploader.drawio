@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="YMWKSPVq3a_G8luJmpdN">
+    <mxGraphModel dx="1604" dy="884" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="upload_to_repository" vertex="1">
+          <mxGeometry height="204" width="180" x="315" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-2" parent="q9fzC4g2H0VnYTW5lrif-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Parámetros:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;--file-name&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;--dest &amp;lt;gitlab|github&amp;gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;--url&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;--project-id&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;--access-token&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;--branch &amp;lt;main&amp;gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;--verify-ssl &amp;lt;false&amp;gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;--comment&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="144" width="180" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-3" parent="q9fzC4g2H0VnYTW5lrif-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="180" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-4" parent="q9fzC4g2H0VnYTW5lrif-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;+ main()&lt;/font&gt;" vertex="1">
+          <mxGeometry height="26" width="180" y="178" as="geometry" />
+        </mxCell>
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-5" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="UploaderFactory" vertex="1">
+          <mxGeometry height="80" width="350" x="230" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-7" parent="q9fzC4g2H0VnYTW5lrif-5" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="350" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-8" parent="q9fzC4g2H0VnYTW5lrif-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;+ create(&lt;/font&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;file_name,&amp;nbsp;&lt;/font&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;dest,&amp;nbsp;&lt;/font&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;url,&amp;nbsp;&lt;/font&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;project-id,&amp;nbsp;&lt;/font&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;access-token,&amp;nbsp;&lt;/font&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;branch,&amp;nbsp;&lt;/font&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;verify-ssl,&amp;nbsp;&lt;/font&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;comment&lt;/font&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;+ upload()&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="46" width="350" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-9" edge="1" parent="1" source="q9fzC4g2H0VnYTW5lrif-1" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="q9fzC4g2H0VnYTW5lrif-5" value="Use">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="365" y="310" as="sourcePoint" />
+            <mxPoint x="525" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-10" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="GitlabUploader" vertex="1">
+          <mxGeometry height="70" width="150" x="230" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-11" parent="q9fzC4g2H0VnYTW5lrif-10" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="150" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-12" parent="q9fzC4g2H0VnYTW5lrif-10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;+ upload()&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="36" width="150" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-13" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="GithubUploader" vertex="1">
+          <mxGeometry height="70" width="150" x="430" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-14" parent="q9fzC4g2H0VnYTW5lrif-13" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="150" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-15" parent="q9fzC4g2H0VnYTW5lrif-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;+ upload()&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="36" width="150" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-16" edge="1" parent="1" source="q9fzC4g2H0VnYTW5lrif-8" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.425;exitY=0.991;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="q9fzC4g2H0VnYTW5lrif-10" value="Use">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="365" y="440" as="sourcePoint" />
+            <mxPoint x="525" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-17" edge="1" parent="1" source="q9fzC4g2H0VnYTW5lrif-8" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=0.532;entryY=0.019;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.567;exitY=1.036;exitDx=0;exitDy=0;exitPerimeter=0;" target="q9fzC4g2H0VnYTW5lrif-13" value="Use">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="425" y="460" as="sourcePoint" />
+            <mxPoint x="525" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-18" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="GitUploader" vertex="1">
+          <mxGeometry height="140" width="255" x="277.5" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-19" parent="q9fzC4g2H0VnYTW5lrif-18" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="255" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-20" parent="q9fzC4g2H0VnYTW5lrif-18" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;+ __init__(file_name, repo_url,project_id, access_token,&amp;nbsp; &amp;nbsp; branch=&quot;main&quot;, verify_ssl=False,commit_message=&quot;File uploaded&quot;)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;+ read_file()&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;+ get_repo_filename()&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;+ abstract upload()&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="106" width="255" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-21" edge="1" parent="1" source="q9fzC4g2H0VnYTW5lrif-12" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.463;exitY=0.95;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.389;entryY=0.009;entryDx=0;entryDy=0;entryPerimeter=0;" target="q9fzC4g2H0VnYTW5lrif-18" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="365" y="710" as="sourcePoint" />
+            <mxPoint x="525" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q9fzC4g2H0VnYTW5lrif-22" edge="1" parent="1" source="q9fzC4g2H0VnYTW5lrif-15" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.518;exitY=1.027;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.554;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="q9fzC4g2H0VnYTW5lrif-18" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="365" y="710" as="sourcePoint" />
+            <mxPoint x="525" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
