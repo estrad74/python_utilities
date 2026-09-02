@@ -9,7 +9,6 @@ from pyVmomi import vim
 from models.host import Host
 from sources.base import InventorySource
 
-
 class VsphereSource(InventorySource):
 
     def __init__(
@@ -21,7 +20,6 @@ class VsphereSource(InventorySource):
         ignore_ssl=True,
         only_powered_on=False
     ):
-
         self.host = host
         self.user = user
         self.password = password

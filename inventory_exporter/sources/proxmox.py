@@ -1,4 +1,6 @@
 # Clase para obtener inventario desde Proxmox.
+from urllib import response
+
 import requests
 import urllib3
 from models.host import Host
@@ -7,7 +9,6 @@ from sources.base import InventorySource
 urllib3.disable_warnings(
     urllib3.exceptions.InsecureRequestWarning
 )
-
 
 class ProxmoxSource(InventorySource):
 
@@ -19,9 +20,25 @@ class ProxmoxSource(InventorySource):
         password
     ):
         self.host = host
-        self.user = user
+        self.user = self.normalize_user(user)
         self.password = password
 
+
+    # Normaliza el usuario de Proxmox para asegurarse de que tenga el sufijo correcto.
+    def normalize_user(self, user):
+
+        user = user.replace("CED\\", "")
+
+        if ( 
+            not user.endswith("@AD") and 
+            not user.endswith("@PAM") and
+            not user.endswith("@PVE")
+        ):
+            user += "@AD"
+
+        return user
+
+    # Función para obtener una sesión autenticada con Proxmox.
     def get_session(self):
 
         url = (

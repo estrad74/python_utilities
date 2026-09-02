@@ -67,11 +67,11 @@ while [ $# -gt 0 ]; do
 done
 
 [ -z "$SOURCE" ]   && { echo "ERROR: falta --source"; exit 1; }
-[ -z "$HOST" ]     && { echo "ERROR: falta --host"; exit 1; }
 [ -z "$USER" ]     && { echo "ERROR: falta --user"; exit 1; }
 [ -z "$PASSWORD" ] && { echo "ERROR: falta --password"; exit 1; }
 [ -z "$FORMAT" ]   && { echo "ERROR: falta --format"; exit 1; }
 [ -z "$OUTPUT" ]   && { echo "ERROR: falta --output"; exit 1; }
+[ -z "$HOST" ]     && { echo "ERROR: falta --host"; exit 1; }
 
 python3 inventory-exporter.py \
     --source "$SOURCE" \
@@ -81,8 +81,8 @@ python3 inventory-exporter.py \
     --format "$FORMAT" \
     --output "$OUTPUT" \
     ${PORT:+--port "$PORT"} \
-    $IGNORE_SSL \
-    $ONLY_POWERED_ON
+    ${IGNORE_SSL:-} \
+    ${ONLY_POWERED_ON:-}
 
 echo "Exportación completada. Archivo generado: $OUTPUT"
 

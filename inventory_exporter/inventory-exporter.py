@@ -4,60 +4,10 @@
 import os
 import argparse
 
-from sources.proxmox import ProxmoxSource
-from sources.vsphere import VsphereSource
-
-from exporters.rundeck_exporter import RundeckExporter
-from exporters.csv_exporter import CsvExporter
-from exporters.json_exporter import JsonExporter
-from exporters.ansible_yaml_exporter import (
-    AnsibleYamlExporter
-)
-
-# Función para obtener la fuente de datos según los argumentos proporcionados.
-def get_source(args):
-
-    if args.source == "proxmox":
-
-        return ProxmoxSource(
-            host=args.host,
-            user=args.user,
-            password=args.password
-        )
-
-    if args.source == "vsphere":
-
-        return VsphereSource(
-            host=args.host,
-            user=args.user,
-            password=args.password,
-            port=args.port,
-            ignore_ssl=args.ignore_ssl,
-            only_powered_on=args.only_powered_on
-        )
-
-    raise ValueError(
-        f"Fuente no soportada: {args.source}"
-    )
-
-# Función para obtener el exportador según el formato especificado.
-def get_exporter(format_name):
-
-    if format_name == "rundeck":
-        return RundeckExporter()
-
-    if format_name == "csv":
-        return CsvExporter()
-
-    if format_name == "ansible":
-        return AnsibleYamlExporter()
-
-    if format_name == "json":
-        return JsonExporter()
-
-    raise ValueError(
-        f"Formato no soportado: {format_name}"
-    )
+from exporters.factory import ExporterFactory
+from sources.factory import SourceFactory
+import sources.base
+import exporters.base
 
 # Función principal que maneja la lógica del programa.
 def main():
@@ -90,7 +40,8 @@ def main():
 
     parser.add_argument(
         "--host",
-        required=True,
+        type=str,
+        default=None,
         help="Host Proxmox o vCenter"
     )
 
@@ -126,17 +77,30 @@ def main():
 
     parser.add_argument(
         "--only-powered-on",
-        action="store_true",
+        action="store_false",
         help="Exportar solo VMs encendidas"
     )
 
 
     args = parser.parse_args()
 
-    source = get_source(args)
 
-    exporter = get_exporter(args.format)
+    # Creación del uploader según la fuente especificada.
+    source = SourceFactory.create(
+        source=args.source,
+        host=args.host,
+        user=args.user,
+        password=args.password,
+        port=args.port,
+        ignore_ssl=args.ignore_ssl,
+        only_powered_on=args.only_powered_on
+    )
 
+    # Creación del exportador según el formato especificado.
+    exporter = ExporterFactory.create(
+        format_name=args.format
+    )
+    
     hosts = source.get_hosts()
 
     exporter.export(hosts,args.output)

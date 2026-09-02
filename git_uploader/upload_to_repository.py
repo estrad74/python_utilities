@@ -57,7 +57,7 @@ def main():
 
     parser.add_argument(
         "--comment",
-        required=True
+        default="Subida automática de fichero exportado"
     )
 
     args = parser.parse_args()
