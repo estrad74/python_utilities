@@ -23,13 +23,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="c8DkhDAT8rppbnMGPyJV-4" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Clase Host" vertex="1">
-          <mxGeometry height="158" width="340" x="70" y="-1090" as="geometry" />
+          <mxGeometry height="218" width="225" x="40" y="-1139" as="geometry" />
         </mxCell>
         <mxCell id="c8DkhDAT8rppbnMGPyJV-5" parent="c8DkhDAT8rppbnMGPyJV-4" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;Propiedades:&lt;/div&gt;&lt;div&gt;+ name: nombre del host&lt;/div&gt;&lt;div&gt;+ hostname: dirección IP del hots&lt;/div&gt;&lt;div&gt;+ os_family: familia del sistema operativo del host (unix|windows)&lt;/div&gt;&lt;div&gt;+ username: usuario administrador del host&lt;/div&gt;&lt;div&gt;+ description: descripción del host (solo para Proxmox)&lt;/div&gt;&lt;div&gt;+ tags: lista de etiquetas&lt;/div&gt;&lt;div&gt;+ metadata: diccionario de metadatos del host&lt;/div&gt;" vertex="1">
-          <mxGeometry height="124" width="340" y="26" as="geometry" />
+          <mxGeometry height="184" width="225" y="26" as="geometry" />
         </mxCell>
         <mxCell id="c8DkhDAT8rppbnMGPyJV-6" parent="c8DkhDAT8rppbnMGPyJV-4" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
-          <mxGeometry height="8" width="340" y="150" as="geometry" />
+          <mxGeometry height="8" width="225" y="210" as="geometry" />
         </mxCell>
         <mxCell id="c8DkhDAT8rppbnMGPyJV-8" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;Clase&amp;nbsp;InventorySource&lt;/div&gt;" vertex="1">
           <mxGeometry height="80" width="210" x="545" y="-900" as="geometry" />
@@ -62,13 +62,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="c8DkhDAT8rppbnMGPyJV-17" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;Clase VsphereSource&lt;/div&gt;" vertex="1">
-          <mxGeometry height="120" width="225" x="537.5" y="-730" as="geometry" />
+          <mxGeometry height="154" width="225" x="537.5" y="-730" as="geometry" />
         </mxCell>
         <mxCell id="c8DkhDAT8rppbnMGPyJV-18" parent="c8DkhDAT8rppbnMGPyJV-17" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
           <mxGeometry height="8" width="225" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="c8DkhDAT8rppbnMGPyJV-19" parent="c8DkhDAT8rppbnMGPyJV-17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ __init__(host,user,password): constructor, recibe la cadena de conexión a la fuente de inventario&lt;/div&gt;&lt;div&gt;+ get_hosts(): obtiene la información de los hosts de la fuente de inventario&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="86" width="225" y="34" as="geometry" />
+        <mxCell id="c8DkhDAT8rppbnMGPyJV-19" parent="c8DkhDAT8rppbnMGPyJV-17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ __init__(host,user,password,port,ignore_ssl, only_powered_on): constructor, recibe la cadena de conexión a la fuente de inventario&lt;/div&gt;&lt;div&gt;+ get_hosts(): obtiene la información de los hosts de la fuente de inventario&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="225" y="34" as="geometry" />
         </mxCell>
         <mxCell id="c8DkhDAT8rppbnMGPyJV-20" edge="1" parent="1" source="c8DkhDAT8rppbnMGPyJV-17" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.483;exitY=-0.015;exitDx=0;exitDy=0;entryX=0.483;entryY=1.043;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" target="c8DkhDAT8rppbnMGPyJV-11" value="Extends">
           <mxGeometry relative="1" width="160" as="geometry">
@@ -149,6 +149,21 @@
           <mxGeometry relative="1" width="160" as="geometry">
             <mxPoint x="607" y="-261" as="sourcePoint" />
             <mxPoint x="510" y="-420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KRJMt5UluNGAoSCmzX2j-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;Clase AwxSource&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="225" x="290" y="-1090" as="geometry" />
+        </mxCell>
+        <mxCell id="KRJMt5UluNGAoSCmzX2j-2" parent="KRJMt5UluNGAoSCmzX2j-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="225" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KRJMt5UluNGAoSCmzX2j-3" parent="KRJMt5UluNGAoSCmzX2j-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ __init__(host,user,password, inventory_id, ignore_ssl): constructor, recibe la cadena de conexión a la fuente de inventario&lt;/div&gt;&lt;div&gt;+ get_hosts(): obtiene la información de los hosts de la fuente de inventario&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="106" width="225" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="KRJMt5UluNGAoSCmzX2j-4" edge="1" parent="1" source="KRJMt5UluNGAoSCmzX2j-3" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.507;exitY=1.015;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.272;entryY=-0.027;entryDx=0;entryDy=0;entryPerimeter=0;" target="c8DkhDAT8rppbnMGPyJV-8" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="450" y="-990" as="sourcePoint" />
+            <mxPoint x="540" y="-890" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>

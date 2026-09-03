@@ -23,7 +23,8 @@ def main():
         required=True,
         choices=[
             "proxmox",
-            "vsphere"
+            "vsphere",
+            "awx"
         ]
     )
 
@@ -42,7 +43,7 @@ def main():
         "--host",
         type=str,
         default=None,
-        help="Host Proxmox o vCenter"
+        help="Host Proxmox, vCenter o AWX"
     )
 
     parser.add_argument(
@@ -54,7 +55,7 @@ def main():
     parser.add_argument(
         "--password",
         required=True,
-        help="Contraseña de conexión"
+        help="Contraseña o token de conexión a la fuente de inventario"
     )
 
     parser.add_argument(
@@ -81,6 +82,12 @@ def main():
         help="Exportar solo VMs encendidas"
     )
 
+    parser.add_argument(
+        "--inventory-id",
+        type=int,
+        default=None,
+        help="ID del inventario en AWX"
+    )
 
     args = parser.parse_args()
 
@@ -93,7 +100,8 @@ def main():
         password=args.password,
         port=args.port,
         ignore_ssl=args.ignore_ssl,
-        only_powered_on=args.only_powered_on
+        only_powered_on=args.only_powered_on,
+        inventory_id=args.inventory_id
     )
 
     # Creación del exportador según el formato especificado.

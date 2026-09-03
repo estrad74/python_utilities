@@ -16,3 +16,5 @@ class Host:
     tags: list = field(default_factory=list)
 
     metadata: dict = field(default_factory=dict)
+
+    groups: list = field(default_factory=list)

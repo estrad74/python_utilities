@@ -9,21 +9,63 @@ class AnsibleYamlExporter(InventoryExporter):
 
         inventory = {
             "all": {
+                "children": {},
                 "hosts": {}
             }
         }
 
         for host in hosts:
-
             host_entry = {
                 "ansible_host": host.hostname
             }
-
+            
             host_entry.update(host.metadata)
+            inventory[
+                "all"
+            ][
+                "hosts"
+            ][
+                host.name
+            ] = host_entry
 
-            inventory["all"]["hosts"][host.name] = host_entry
+            for group in host.groups:
+                if (
+                    group
+                    not in inventory[
+                        "all"
+                    ][
+                        "children"
+                    ]
+                ):
 
-        with open(filename, "w") as f:
+                    inventory[
+                        "all"
+                    ][
+                        "children"
+                    ][
+                        group
+                    ] = {
+                        "hosts": {}
+                    }
+
+                inventory[
+                    "all"
+                ][
+                    "children"
+                ][
+                    group
+                ][
+                    "hosts"
+                ][
+                    host.name
+                ] = {}
+
+        with open(
+            filename,
+            "w",
+            encoding="utf-8"
+        ) as f:
+
             yaml.dump(
                 inventory,
                 f,
